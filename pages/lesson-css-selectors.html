@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-CSS-Selectors</title>
+    <style>
+        h3{
+            color: chartreuse;
+        }
+        .heading {
+            color: blue;
+        }
+        #title{
+            color: salmon;
+        }
+        
+        a[target="_blank"]{
+            color: yellow;
+        }
+/* 
+        div p {
+            color: #181f;
+        } */
+
+        /* div > p {
+            color: red;
+        } */
+
+        /* h3 + p {  
+            color: tomato;
+        } */
+
+        div ~ p{
+            color: blueviolet;
+        }
+
+        /* list ekaka first element eka color weno */
+        li:first-child { 
+            color: aqua;
+        }
+
+
+        li:nth-child(odd) { /*otthte elemet tika  color weno*/ 
+            color: brown;
+        }
+
+        /* ul:hover{
+            background-color: steelblue;
+        } */
+
+        li:hover {
+            background-color: aquamarine;
+        }
+
+        /* p::first-line{
+            font-size: 20px;
+            color: blueviolet;
+        } */
+
+        /* p::before {
+            content: "Hello";
+            color: aqua;
+        } */
+
+        /* p ::after {
+            content: "!!!";
+            color: red;
+        } */
+
+        /* h1,
+        h2,
+        h3 {
+            color: coral;
+        } */
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Lesson-CSS-Selectors</h1>
+    <h2> 1. Element Selector </h2>
+
+    <h3>Heloo World</h3>
+
+    <h2>2. Class Selector</h2>
+
+        <h3 class="heading">Hello World</h3>
+        <h4 class="heading">Hello World</h3>
+        <h5 class="heading">Hello World</h3>
+        <h6 class="heading">Hello World</h3>
+
+    <h2>3. ID Selector</h2>
+    <!-- id is always unique  -->
+
+    <h3 id="title">My Title</h3>
+
+    <h2>4. Attribute Select</h2>
+
+    <a href="https://www.google.com" target="_blank">Google search</a>
+
+    <h2>5. Descendant Selector (space)</h2>
+
+    <!-- <div>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+    </div> -->
+
+    <h2>6. Child Selector (>)</h2> 
+<!-- direct child element walata withrak apply krnna  -->
+
+    <div>
+        <p>This paragraph is a  direct child  of div</p>
+        <section>
+            <p>This paragraph is incide a section, not a direct chid of this</p>
+        </section>
+    </div>
+
+    <h2>7. Adjacent sibling Selector (+)</h2> 
+    <!-- lagama inn elaga element ekt apply wenne -->
+
+    <h3>Adjacent</h3>
+    <p>Hello One</p>
+    <p>Hello Two</p>
+
+    <h2>8.General  Sibling Selector (~)</h2>
+    <!-- sibbling elements walata withrai apply wenne -->
+
+
+    <h1>Main Heading</h1> <!--Mai-->
+    <p>Lorem ipsum dolor sit amet.</p><!--Nangi-->
+    <p>Lorem ipsum dolor sit amet.</p><!--Aiyai-->
+    <div>
+        <p>Not Applied</p><!--pita ekkenek-->
+    </div>
+
+    <h2>9. Pseudu element selector </h2>
+    <ul>
+        <li>Helo</li>
+        <li>Java</li>
+        <li>hsja</li>
+        <li>kakaa</li>
+        <li>oaas</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, eum  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam consequatur atque esse tempora non vitae numquam ipsum quidem repellat nesciunt sed harum distinctio accusantium veniam ea ullam, labore, illum facilis!nesciunt placeat dicta enim consequatur expedita reprehenderit nemo error consectetur!</p>
+
+    <h2>10. Group Selector</h2>
+    <!-- group ekk hadala ekata color ekk apply krnwa -->
+    <h1>Heading 01</h1>
+    <h2>Heading 02</h2>
+    <h3>Heading 03</h3>
+
+    
+</body>
+</html>
