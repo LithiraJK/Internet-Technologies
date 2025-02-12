@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-lesson-flexbox</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        border: 2px solid black;
+        border-radius: 12px;
+        font-size: 30px;
+        text-align: center;
+    }
+    #b1{
+        background-color: blanchedalmond;
+        align-self: center;
+    }
+    #b2{
+        background-color: red;
+    }
+    #b3{
+        background-color: yellow;
+    }
+    #b4{
+        background-color: green;
+        align-self: center;
+    }
+    .conatainer{
+        display: flex; /*default row*/
+        height: 95vh;
+        border: 1px solid black;
+        /* defualt eka thamai meka, display flex kiyana eka witahark dunnoth meya default da gnnwa row kiyala. */
+        /* flex-direction: row; */
+        /* flex-direction: column; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+        /* justify-content: center; */
+        /* justify-content: flex-end; */
+        /* justify-content: end; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+        /* justify-content: space-evenly; */
+        /* align-items: stretch; */
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /* flex-wrap: wrap;  */
+        /* flex-wrap: nowrap; */
+        /* flex-wrap: wrap-reverse; */
+
+        row-gap: 10px;
+        column-gap: 10px;
+
+        /* for cards */
+        /* flex-direction: column; */
+        /* align-items: center; */
+        /* flex-wrap: wrap;  */
+        /* justify-content: space-around; */
+
+    }
+</style>
+<body>
+    <div class="conatainer">
+        <div id="b1" class="box">1</div>
+        <div id="b2" class="box">2</div>
+        <div id="b3" class="box">3</div>
+        <div id="b4" class="box">4</div>
+    </div>
+</body>
+</html>
