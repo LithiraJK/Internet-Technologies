@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills Icons Demo</title>
+  <style>
+    /* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #0c0f15; /* Dark background for modern UI look */
+  color: #fff;
+  min-height: 200vh; /* So we can scroll and see the effect */
+}
+
+/* Skills Section */
+.skills-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.skills-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #06d6a0; /* Accent color */
+}
+
+/* Container for the icons rows */
+.skills-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide overflow if icons move out of bounds */
+  height: 150px;    /* Adjust as needed for icon sizes */
+  margin: 0 auto;
+}
+
+/* Each row of icons */
+.icons-row {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  /* 
+    We'll apply a transform in the 'parallax' effect below 
+    so these rows shift horizontally at different speeds
+  */
+}
+
+.icons-row img {
+  width: 80px;  /* Adjust to fit your design */
+  margin: 0 1.5rem;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.3));
+  transition: transform 0.3s ease;
+}
+
+/* Subtle hover effect on icons */
+.icons-row img:hover {
+  transform: scale(1.1);
+}
+
+/* 
+  Different "depth" classes so each row can move at different speeds 
+  (front moves faster, back moves slower). 
+*/
+.icons-row--front {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.icons-row--back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.5; /* Slightly dimmer to appear behind */
+}
+
+/* 
+  Parallax-like scrolling effect
+  - The actual movement is done in the :root:before trick or
+    via JS below. This example uses a pure CSS trick with the
+    'background-attachment: fixed' approach, or you can do
+    transform-based movement in JavaScript for more control.
+*/
+
+/* Optional: If you want purely CSS-based infinite horizontal animation 
+   (not scroll-based), you could do something like:
+   .icons-row {
+     animation: moveRow 20s linear infinite;
+   }
+
+   @keyframes moveRow {
+     0%   { transform: translateX(0); }
+     100% { transform: translateX(-50%); }
+   }
+*/
+
+
+  </style>
+
+<script>
+    // Wait until DOM is loaded
+    document.addEventListener("DOMContentLoaded", () => {
+      const frontRow = document.querySelector(".icons-row--front");
+      const backRow  = document.querySelector(".icons-row--back");
+  
+      window.addEventListener("scroll", () => {
+        // How far have we scrolled?
+        const scrollTop = window.pageYOffset;
+  
+        // Adjust these speeds to taste
+        const frontSpeed = 0.3; 
+        const backSpeed  = 0.1;
+  
+        // Move each row horizontally based on scroll
+        frontRow.style.transform = `translateX(${scrollTop * frontSpeed}px)`;
+        backRow.style.transform  = `translateX(${scrollTop * backSpeed}px)`;
+      });
+    });
+  </script>
+  
+</head>
+<body>
+
+  <!-- Other sections of your website above... -->
+
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <!-- Row 1 of icons -->
+      <div class="icons-row icons-row--front">
+        <img src="/assets/images/icons8-css3.svg" alt="Skill Icon 1" />
+        <img src="/assets/images/icons8-github-logo (1).svg" alt="Skill Icon 2" />
+        <img src="images/icon3.png" alt="Skill Icon 3" />
+        <img src="images/icon4.png" alt="Skill Icon 4" />
+        <!-- Add as many icons as you want -->
+      </div>
+
+      <!-- Row 2 of icons (for a layered/parallax effect) -->
+      <div class="icons-row icons-row--back">
+        <img src="/assets/images/icons8-css3.svg" alt="Skill Icon 1" />
+        <img src="/assets/images/icons8-github-logo (1).svg" alt="Skill Icon 2" />
+        <img src="images/icon3.png" alt="Skill Icon 3" />
+        <img src="images/icon4.png" alt="Skill Icon 4" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Other sections of your website below... -->
+
+</body>
+</html>

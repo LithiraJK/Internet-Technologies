@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills Cards Example</title>
+  <!-- Internal CSS -->
+  <style>
+    /* Global reset and basic styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2d2d2d; /* Dark background */
+      color: #fff; /* Light text */
+    }
+
+    /* Section Container */
+    .skills-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .skills-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #aaa;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Cards Grid Container */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Individual Card */
+    .card {
+      background-color: #1e1e1e; /* Slightly lighter than body background */
+      padding: 1.5rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left; /* or center if you prefer everything centered */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Card Icon */
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ffcc00; /* Accent color for icons */
+    }
+
+    /* Card Title */
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Card Description */
+    .card-description {
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 768px) {
+      .cards-container {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cards-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <p class="subtitle">
+      Far far away, behind the word mountains, far from the countries
+      Vokalia and Consonantia
+    </p>
+
+    <div class="cards-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3 class="card-title">Mobile App</h3>
+        <p class="card-description">
+          I throw myself down among the tall grass by the stream as I lie close to the earth.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-icon">💻</div>
+        <h3 class="card-title">App Development</h3>
+        <p class="card-description">
+          I throw myself down among the tall grass by the stream as I lie close to the earth.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-icon">👤</div>
+        <h3 class="card-title">Personal Portfolio</h3>
+        <p class="card-description">
+          I throw myself down among the tall grass by the stream as I lie close to the earth.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-icon">💡</div>
+        <h3 class="card-title">Business Strategy</h3>
+        <p class="card-description">
+          I throw myself down among the tall grass by the stream as I lie close to the earth.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3 class="card-title">Mobile App</h3>
+        <p class="card-description">
+          I throw myself down among the tall grass by the stream as I lie close to the earth.
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3 class="card-title">Analytics</h3>
+        <p class="card-description">
+          I throw myself down among the tall grass by the stream as I lie close to the earth.
+        </p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
